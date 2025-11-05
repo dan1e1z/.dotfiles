@@ -1,0 +1,1 @@
+/home/daniel/.local/share/omf/themes/dracula-theme-omf/fish_prompt.fish
