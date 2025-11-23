@@ -1,8 +1,19 @@
+-- Custom Snacks Picker Example
+-- https://github.com/folke/snacks.nvim/pull/1019
+
 return {
 	"folke/snacks.nvim",
 	opts = {
 		picker = {
 			enabled = true,
+			sources = {
+				files = { ignored = true, hidden = true },
+			},
+			include = { ".env" },
+			exclude = {
+				".git",
+				"node_modules",
+			},
 		},
 	},
 
@@ -168,6 +179,7 @@ return {
 }
 
 -- Non-Live Mode: fzf
+-- https://junegunn.github.io/fzf/search-syntax/
 --
 -- Token	       Match type	                              Description
 -- sbtrkt	       fuzzy-match	                              Items that include sbtrkt characters in that order
@@ -180,6 +192,7 @@ return {
 -- !.mp3$	       inverse-suffix-exact-match	              Items that do not end with .mp3
 
 -- Live Mode: rg (regex by default)
+-- https://docs.rs/regex/1.12.2/regex/#syntax
 --
 -- Token / Pattern      Match type                           Description
 -- music                regex-substring                       Items containing “music”

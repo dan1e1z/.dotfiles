@@ -11,30 +11,32 @@
       "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = () => {",
       "  return (",
       "    <div>",
-      "      ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}",
+      "      ${1}",
       "    </div>",
       "  )",
       "}",
       "",
-      "export default ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}};"
+      "export default ${1};"
     ],
     "description": "Creates a React functional component."
   },
+
   "functionCSSCompnent": {
     "prefix": "compcss",
     "body": [
       "import styles from './${TM_FILENAME_BASE}.module.css';",
       "",
-      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = ($0) => {",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = ($2) => {",
       "  return (",
-      "    <div className={styles.container}>${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}</div>",
+      "    <div className={styles.container}>${1}</div>",
       "  );",
       "};",
       "",
-      "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/};"
+      "export default ${1};"
     ],
     "description": "Create a functional React component with CSS module import"
   },
+
   "divCSSStyles": {
     "prefix": "divc",
     "body": ["<div className={styles.$0}>", "</div>"],
