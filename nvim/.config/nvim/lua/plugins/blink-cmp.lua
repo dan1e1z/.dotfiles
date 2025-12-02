@@ -34,7 +34,8 @@ return {
 			nerd_font_variant = "mono",
 		},
 
-		completion = { documentation = { auto_show = true } },
+		completion = { documentation = { auto_show = true }, ghost_text = { enabled = true } },
+
 		signature = { enabled = true },
 
 		sources = {
