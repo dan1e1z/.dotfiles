@@ -5,7 +5,7 @@ return {
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		vim.lsp.config("*", { capabilities = capabilities })
 
-		vim.lsp.handlers["$/progress"] = function() end
+		-- vim.lsp.handlers["$/progress"] = function() end
 
 		local servers = {
 			"tailwindcss",
